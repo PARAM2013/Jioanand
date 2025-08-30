@@ -1,1 +1,9 @@
 .vs/
+
+# .NET build output directories
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache

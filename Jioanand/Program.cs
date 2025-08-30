@@ -1,6 +1,7 @@
 using Jioanand.Data;
 using Jioanand.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,9 +17,23 @@ var app = builder.Build();
 // Initialize Database
 using (var scope = app.Services.CreateScope())
 {
-    var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<ApplicationDbContext>();
-    DbInitializer.Initialize(context);
+    try
+    {
+        var services = scope.ServiceProvider;
+        var context = services.GetRequiredService<ApplicationDbContext>();
+        
+        // Ensure database is created and migrations are applied
+        context.Database.Migrate();
+        
+        // Seed initial data
+        DbInitializer.Initialize(context);
+    }
+    catch (Exception ex)
+    {
+        var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred while migrating or initializing the database.");
+        throw;
+    }
 }
 
 // Configure the HTTP request pipeline.

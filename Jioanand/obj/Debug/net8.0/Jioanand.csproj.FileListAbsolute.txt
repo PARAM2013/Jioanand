@@ -205,3 +205,6 @@ C:\Users\Admin\source\repos\Jioanand\Jioanand\obj\Debug\net8.0\refint\Jioanand.d
 C:\Users\Admin\source\repos\Jioanand\Jioanand\obj\Debug\net8.0\Jioanand.pdb
 C:\Users\Admin\source\repos\Jioanand\Jioanand\obj\Debug\net8.0\Jioanand.genruntimeconfig.cache
 C:\Users\Admin\source\repos\Jioanand\Jioanand\obj\Debug\net8.0\ref\Jioanand.dll
+C:\Users\Admin\source\repos\Jioanand\Jioanand\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Admin\source\repos\Jioanand\Jioanand\bin\Debug\net8.0\itextsharp.dll
+C:\Users\Admin\source\repos\Jioanand\Jioanand\bin\Debug\net8.0\SixLabors.ImageSharp.dll

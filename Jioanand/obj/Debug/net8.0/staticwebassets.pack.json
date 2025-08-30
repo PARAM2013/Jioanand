@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\Jioanand.p8gqlz19fc.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\css\\room.css",
+      "PackagePath": "staticwebassets\\css\\room.css"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\js\\room.js",
+      "PackagePath": "staticwebassets\\js\\room.js"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\js\\site.js",

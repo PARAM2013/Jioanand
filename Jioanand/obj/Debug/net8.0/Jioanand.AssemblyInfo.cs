@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jioanand")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a2708daafa76a4c6ee3f6e0071b2fb271452ed1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b27f707dac6e84d566a23b5c9ad70d3ad42151b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jioanand")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jioanand")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

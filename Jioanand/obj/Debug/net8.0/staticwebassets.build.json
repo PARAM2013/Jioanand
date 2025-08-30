@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+NYEI91WPXT1Ei+smE0b0PFrjcWkius/LsCjKG7p4YY=",
+  "Hash": "ZcN4boJYDocbl5q2CQzm8vZJokYSb9diSnm7n2s7Txc=",
   "Source": "Jioanand",
   "BasePath": "_content/Jioanand",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Jioanand.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\css\\room.css",
+      "SourceId": "Jioanand",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\",
+      "BasePath": "_content/Jioanand",
+      "RelativePath": "css/room#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "md51ncr09j",
+      "Integrity": "hldWWdBDZm+4543JrfHBCCgxZQ3/jFaST2D9/7bfddU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\room.css"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\css\\site.css",
       "SourceId": "Jioanand",
       "SourceType": "Discovered",
@@ -73,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "x7mycqhy2c",
+      "Integrity": "A5dIa+BTVpinsEaMI0sEv8H87O6CzyqjlMeNLDLmdoE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -101,6 +122,27 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\js\\room.js",
+      "SourceId": "Jioanand",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\",
+      "BasePath": "_content/Jioanand",
+      "RelativePath": "js/room#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ug92zx3isu",
+      "Integrity": "koyMPZVDpCPjTR+pceUGvOyCwEhN9q7QmmuetDcTL+0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\room.js"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\js\\site.js",
       "SourceId": "Jioanand",
       "SourceType": "Discovered",
@@ -115,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xtxxf3hu2r",
-      "Integrity": "hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=",
+      "Fingerprint": "8jsxirh4gc",
+      "Integrity": "TENicENm0D/cSvBAkh4YyWZ3hvkvksOXH+oxkuFHoek=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -1321,8 +1363,8 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\css\\site.css",
+      "Route": "css/room.css",
+      "AssetFile": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\css\\room.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1331,7 +1373,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "3149"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1381,48 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"hldWWdBDZm+4543JrfHBCCgxZQ3/jFaST2D9/7bfddU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Aug 2025 11:22:47 GMT"
+          "Value": "Sat, 30 Aug 2025 12:47:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hldWWdBDZm+4543JrfHBCCgxZQ3/jFaST2D9/7bfddU="
+        }
+      ]
+    },
+    {
+      "Route": "css/room.md51ncr09j.css",
+      "AssetFile": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\css\\room.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3149"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hldWWdBDZm+4543JrfHBCCgxZQ3/jFaST2D9/7bfddU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 30 Aug 2025 12:47:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,15 +1432,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
+          "Value": "md51ncr09j"
         },
         {
           "Name": "label",
-          "Value": "css/site.css"
+          "Value": "css/room.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-hldWWdBDZm+4543JrfHBCCgxZQ3/jFaST2D9/7bfddU="
         }
       ]
     },
@@ -1376,7 +1455,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "3278"
         },
         {
           "Name": "Content-Type",
@@ -1384,11 +1463,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"A5dIa+BTVpinsEaMI0sEv8H87O6CzyqjlMeNLDLmdoE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Aug 2025 11:22:47 GMT"
+          "Value": "Sat, 30 Aug 2025 12:38:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1398,7 +1477,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-A5dIa+BTVpinsEaMI0sEv8H87O6CzyqjlMeNLDLmdoE="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.x7mycqhy2c.css",
+      "AssetFile": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3278"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A5dIa+BTVpinsEaMI0sEv8H87O6CzyqjlMeNLDLmdoE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 30 Aug 2025 12:38:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x7mycqhy2c"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5dIa+BTVpinsEaMI0sEv8H87O6CzyqjlMeNLDLmdoE="
         }
       ]
     },
@@ -1649,6 +1773,133 @@
       ]
     },
     {
+      "Route": "js/room.js",
+      "AssetFile": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\js\\room.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5068"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"koyMPZVDpCPjTR+pceUGvOyCwEhN9q7QmmuetDcTL+0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 30 Aug 2025 12:47:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-koyMPZVDpCPjTR+pceUGvOyCwEhN9q7QmmuetDcTL+0="
+        }
+      ]
+    },
+    {
+      "Route": "js/room.ug92zx3isu.js",
+      "AssetFile": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\js\\room.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5068"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"koyMPZVDpCPjTR+pceUGvOyCwEhN9q7QmmuetDcTL+0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 30 Aug 2025 12:47:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ug92zx3isu"
+        },
+        {
+          "Name": "label",
+          "Value": "js/room.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-koyMPZVDpCPjTR+pceUGvOyCwEhN9q7QmmuetDcTL+0="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.8jsxirh4gc.js",
+      "AssetFile": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4264"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TENicENm0D/cSvBAkh4YyWZ3hvkvksOXH+oxkuFHoek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 30 Aug 2025 12:38:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8jsxirh4gc"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TENicENm0D/cSvBAkh4YyWZ3hvkvksOXH+oxkuFHoek="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\js\\site.js",
       "Selectors": [],
@@ -1659,7 +1910,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "231"
+          "Value": "4264"
         },
         {
           "Name": "Content-Type",
@@ -1667,11 +1918,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "\"TENicENm0D/cSvBAkh4YyWZ3hvkvksOXH+oxkuFHoek=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Aug 2025 11:22:47 GMT"
+          "Value": "Sat, 30 Aug 2025 12:38:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1681,52 +1932,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.xtxxf3hu2r.js",
-      "AssetFile": "C:\\Users\\Admin\\source\\repos\\Jioanand\\Jioanand\\wwwroot\\js\\site.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "231"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 30 Aug 2025 11:22:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xtxxf3hu2r"
-        },
-        {
-          "Name": "label",
-          "Value": "js/site.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+          "Value": "sha256-TENicENm0D/cSvBAkh4YyWZ3hvkvksOXH+oxkuFHoek="
         }
       ]
     },

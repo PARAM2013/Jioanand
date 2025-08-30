@@ -1,0 +1,160 @@
+@model IEnumerable<Jioanand.Models.Room>
+@{
+    ViewData["Title"] = "Room Availability";
+    var date = (DateTime)ViewBag.Date;
+}
+
+<div class="container-fluid mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3">Room Availability</h1>
+        <div class="d-flex gap-2">
+            <div class="input-group">
+                <input type="date" id="dateSelector" class="form-control" value="@date.ToString("yyyy-MM-dd")" />
+                <button class="btn btn-primary" onclick="updateDate()">
+                    <i class="bi bi-calendar-check"></i> Check
+                </button>
+            </div>
+            <a asp-action="Index" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left"></i> Back
+            </a>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>Room</th>
+                    <th>Location</th>
+                    <th>Type</th>
+                    <th>Capacity</th>
+                    <th>Price/Day</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var room in Model)
+                {
+                    var isBooked = room.BookingRooms.Any(br => 
+                        br.Booking.CheckInDate.Date <= date.Date && 
+                        br.Booking.CheckOutDate.Date >= date.Date &&
+                        br.Booking.Status != Jioanand.Models.Enums.BookingStatus.Cancelled);
+                    
+                    <tr class="@(isBooked ? "table-danger" : "table-success")">
+                        <td>
+                            <strong>@room.RoomNumber</strong>
+                            <div class="small text-muted">Floor @room.Floor</div>
+                        </td>
+                        <td>@room.Location.Name</td>
+                        <td><span class="badge bg-primary">@room.Type</span></td>
+                        <td>@room.Capacity</td>
+                        <td>₹@room.PricePerDay</td>
+                        <td>
+                            <span class="badge bg-@(isBooked ? "danger" : "success")">
+                                @(isBooked ? "Booked" : "Available")
+                            </span>
+                        </td>
+                        <td>
+                            @if (!isBooked)
+                            {
+                                <a href="#" class="btn btn-sm btn-primary" onclick="startBooking(@room.RoomId)">
+                                    <i class="bi bi-calendar-plus"></i> Book Now
+                                </a>
+                            }
+                            else
+                            {
+                                <button class="btn btn-sm btn-secondary" disabled>
+                                    <i class="bi bi-calendar-x"></i> Unavailable
+                                </button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Mobile View - Cards -->
+<div class="d-md-none mt-4">
+    @foreach (var room in Model)
+    {
+        var isBooked = room.BookingRooms.Any(br => 
+            br.Booking.CheckInDate.Date <= date.Date && 
+            br.Booking.CheckOutDate.Date >= date.Date &&
+            br.Booking.Status != Jioanand.Models.Enums.BookingStatus.Cancelled);
+        
+        <div class="card mb-3 @(isBooked ? "border-danger" : "border-success")">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h5 class="card-title">@room.RoomNumber</h5>
+                        <h6 class="card-subtitle text-muted">@room.Location.Name - Floor @room.Floor</h6>
+                    </div>
+                    <span class="badge bg-@(isBooked ? "danger" : "success")">
+                        @(isBooked ? "Booked" : "Available")
+                    </span>
+                </div>
+                
+                <div class="mt-3">
+                    <p class="mb-1"><strong>Type:</strong> <span class="badge bg-primary">@room.Type</span></p>
+                    <p class="mb-1"><strong>Capacity:</strong> @room.Capacity persons</p>
+                    <p class="mb-1"><strong>Price:</strong> ₹@room.PricePerDay per day</p>
+                </div>
+
+                <div class="mt-3">
+                    @if (!isBooked)
+                    {
+                        <a href="#" class="btn btn-primary w-100" onclick="startBooking(@room.RoomId)">
+                            <i class="bi bi-calendar-plus"></i> Book Now
+                        </a>
+                    }
+                    else
+                    {
+                        <button class="btn btn-secondary w-100" disabled>
+                            <i class="bi bi-calendar-x"></i> Unavailable
+                        </button>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        function updateDate() {
+            const date = document.getElementById('dateSelector').value;
+            window.location.href = '@Url.Action("Availability")' + '?date=' + date;
+        }
+
+        function startBooking(roomId) {
+            const date = document.getElementById('dateSelector').value;
+            window.location.href = '@Url.Action("Create", "Booking")' + '?roomId=' + roomId + '&date=' + date;
+        }
+    </script>
+}
+
+@section Styles {
+    <style>
+        @@media (max-width: 768px) {
+            .table-responsive {
+                display: none;
+            }
+        }
+        
+        @@media (min-width: 769px) {
+            .d-md-none {
+                display: none !important;
+            }
+        }
+
+        .card {
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+}

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jioanand")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5be1efcc31fe89931bab36803d26a0828cfd3ef4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb84b5bdd3bb9f009c3a4405fb456c0b09f1c5b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jioanand")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jioanand")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -11,3 +11,4 @@ This project is an ASP.NET Core web application targeting .NET 8.0. It is config
 
 - **IDE:** Visual Studio 2022
 - **Database:** Microsoft SQL Server (MSSQL)
+- use SQL Server as its database system and interacts with it through Entity Framework Core (EF Core) using a code-first approach.

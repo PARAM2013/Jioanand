@@ -1,6 +1,6 @@
 # Project Status
 
-## Current Status (August 30, 2025)
+## Current Status (August 31, 2025)
 
 ### Completed
 - Initial project setup (ASP.NET Core MVC)
@@ -15,6 +15,12 @@
   - Room availability checking
   - Responsive grid layout
   - Room status management
+- Client Management Module
+  - Client Controller with full CRUD operations
+  - Modern, mobile-friendly views for all client actions
+  - Document upload functionality for ID proofs
+  - Client search by name and contact number
+  - Booking history display on client details page
 
 ### In Progress
 - Testing and Debugging
@@ -36,14 +42,7 @@
    - Cancellation process
    - Booking calendar view
 
-2. Client Management
-   - Create ClientController
-   - Client registration form
-   - Document upload system
-   - Booking history view
-   - Client search functionality
-
-3. Payment System
+2. Payment System
    - Create PaymentController
    - Handle advance payments
    - Generate receipts

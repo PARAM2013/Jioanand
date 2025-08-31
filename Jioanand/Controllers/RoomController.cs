@@ -70,8 +70,10 @@ public class RoomController : Controller
             room.UpdatedAt = DateTime.UtcNow;
             _context.Add(room);
             await _context.SaveChangesAsync();
+            TempData["SuccessMessage"] = "Room created successfully!";
             return RedirectToAction(nameof(Index));
         }
+        TempData["ErrorMessage"] = "The form has errors. Please correct them and try again.";
         ViewBag.Locations = _context.Locations.ToList();
         ViewBag.RoomTypes = Enum.GetValues(typeof(RoomType))
             .Cast<RoomType>()
@@ -110,6 +112,7 @@ public class RoomController : Controller
     {
         if (id != room.RoomId)
         {
+            TempData["ErrorMessage"] = "Room not found.";
             return NotFound();
         }
 
@@ -117,23 +120,33 @@ public class RoomController : Controller
         {
             try
             {
+                // Ensure CreatedAt is not modified
+                var originalRoom = await _context.Rooms.AsNoTracking().FirstOrDefaultAsync(r => r.RoomId == id);
+                if (originalRoom != null)
+                {
+                    room.CreatedAt = originalRoom.CreatedAt;
+                }
+
                 room.UpdatedAt = DateTime.UtcNow;
                 _context.Update(room);
                 await _context.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Room updated successfully!";
+                return RedirectToAction(nameof(Index));
             }
             catch (DbUpdateConcurrencyException)
             {
                 if (!RoomExists(room.RoomId))
                 {
-                    return NotFound();
+                    TempData["ErrorMessage"] = "The room you were editing was deleted by another user.";
+                    return RedirectToAction(nameof(Index));
                 }
                 else
                 {
-                    throw;
+                    ModelState.AddModelError(string.Empty, "The room was modified by another user. Your changes were not saved. Please try again.");
                 }
             }
-            return RedirectToAction(nameof(Index));
         }
+        TempData["ErrorMessage"] = "The form has errors. Please correct them and try again.";
         ViewBag.Locations = _context.Locations.ToList();
         ViewBag.RoomTypes = Enum.GetValues(typeof(RoomType))
             .Cast<RoomType>()
@@ -169,11 +182,23 @@ public class RoomController : Controller
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var room = await _context.Rooms.FindAsync(id);
-        if (room != null)
+        if (room == null)
+        {
+            TempData["ErrorMessage"] = "The room could not be found.";
+            return RedirectToAction(nameof(Index));
+        }
+
+        try
         {
             _context.Rooms.Remove(room);
+            await _context.SaveChangesAsync();
+            TempData["SuccessMessage"] = "Room deleted successfully.";
         }
-        await _context.SaveChangesAsync();
+        catch (DbUpdateException)
+        {
+            TempData["ErrorMessage"] = "The room could not be deleted. It may have existing bookings linked to it.";
+        }
+
         return RedirectToAction(nameof(Index));
     }
 

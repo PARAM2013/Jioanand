@@ -1,0 +1,56 @@
+@model Jioanand.Models.Room
+
+@{
+    ViewData["Title"] = "Delete Room";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="card shadow-sm border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h1 class="h4 mb-0">
+                        <i class="bi bi-exclamation-triangle"></i> Confirm Deletion
+                    </h1>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Are you sure you want to permanently delete this room?</p>
+
+                    <div class="alert alert-warning" role="alert">
+                        This action cannot be undone.
+                    </div>
+
+                    <h5 class="mt-4">Room Details:</h5>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-4">Room Number</dt>
+                        <dd class="col-sm-8">@Model.RoomNumber</dd>
+
+                        <dt class="col-sm-4">Location</dt>
+                        <dd class="col-sm-8">@Model.Location.Name</dd>
+
+                        <dt class="col-sm-4">Floor</dt>
+                        <dd class="col-sm-8">@Model.Floor</dd>
+
+                        <dt class="col-sm-4">Type</dt>
+                        <dd class="col-sm-8">@Model.Type</dd>
+                    </dl>
+
+                    <form asp-action="Delete" method="post" class="mt-4">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="RoomId" />
+
+                        <div class="d-flex justify-content-start gap-2">
+                            <button type="submit" class="btn btn-danger">
+                                <i class="bi bi-trash"></i> Yes, Delete
+                            </button>
+                            <a asp-action="Index" class="btn btn-outline-secondary">
+                                <i class="bi bi-x-circle"></i> Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
